@@ -15,12 +15,13 @@ const auth =async  (req, res, next) => {
                     if (response.length > 0) {
                         next()
                     }else{
-                     return res.status(400)
+                     return res.status(400).json({message:"unauthorized"})
                     }
                 })
         }
     } catch (error) {
         
+     console.log(error)
     }
    
 }

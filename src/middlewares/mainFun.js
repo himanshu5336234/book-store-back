@@ -5,7 +5,7 @@ require('dotenv').config();
 const jwtConfig = {
     secret: "SECRET_KEY_@123_#_jwt",
     refreshTokenSecret: "clsdlwer2524t49rfekfldfsf=sd-sdsv",
-    expireTime: 30 * 60,
+    expireTime: 30* 60*60,
     refreshTokenExpireTime: 30 * 60 * 60
 }
 
