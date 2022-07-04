@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 mongoose.connect(
+    // "mongodb+srv://himanshu:12345@cluster0.dfvv7lg.mongodb.net/?retryWrites=true&w=majority",
     "mongodb+srv://himanshu:12345@cluster0.dfvv7lg.mongodb.net/?retryWrites=true&w=majority",
     {
         useNewUrlParser: true,

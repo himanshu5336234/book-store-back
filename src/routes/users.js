@@ -32,9 +32,10 @@ const Registration = async (req, res) => {
 }
 const Login = async (req, res) => {
   try {
+
     const { email, password } = req.body
     const result = await user.find({ Email: email })
-
+console.log(result)
     if (result.length > 0) {
       const match = await bcrypt.compare(password, result[0].Password)
       if (match) {
