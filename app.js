@@ -13,7 +13,7 @@ app.set('port', process.env.PORT);
 
 
 //middleware
-app.use(cors({origin :'https://booklane.netlify.app'}))
+// app.use(cors({origin :'https://booklane.netlify.app'}))
 
 
 // app.set('view engine', 'ejs');
