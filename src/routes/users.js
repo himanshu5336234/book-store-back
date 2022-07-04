@@ -9,15 +9,16 @@ const Registration = async (req, res) => {
 
   try {
     const { name, password, phone, email } = req.body
-    const oldUser = await user.findOne({ Email: email });
-    if (oldUser) {
+    const oldUser = await user.find({ Email: email });
+    if (oldUser.length>0) {
+      console.log(oldUser)
       return res.json({ message: "User Already Exist. Please Login", status: false });
     }
 
     const hashPassword = await generateHashPassword(password)
     user.collection.insertOne({ Name: name, Password: hashPassword, Phone: phone, Email: email }, async (error, result) => {
       if (error) {
-        return console.error(err);
+        return console.error(error);
       } else {
         const AccessToken = await generateAccessToken(email)
         return res.json({ message: "Registration done successfully ", Token: AccessToken, status: true, })

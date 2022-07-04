@@ -11,7 +11,7 @@ const createAuthor = async (req, res) => {
 
     author.collection.insertOne({ Name: name, Age: age, Dob: dob }, async (error, result) => {
       if (error) {
-        return console.error(err);
+         console.error(error);
       } else {
         return res.json({ message: "add author successfully", status: true })
     
