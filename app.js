@@ -32,6 +32,6 @@ app.use("/", Router)
 
 
 app.listen(process.env.PORT||8080, () => {
-  console.log("i m on:",process.env.PORT)
+  console.log(process.env.PORT)
 })
 module.exports = app;
