@@ -1,10 +1,12 @@
 
 const express = require('express');
 const cors = require("cors")
+const http = require('http');
 const session = require('express-session');
 const Router = require('./src/routes/index');
 const Database = require("./src/config/Database/Database")
 const app = express();
+const server = http.createServer(app);
 require("dotenv").config()
 
 
