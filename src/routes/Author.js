@@ -27,6 +27,7 @@ const createAuthor = async (req, res) => {
 
 const Authors = async (req, res) => {
   try {
+ 
     const result = await author.find()
     if (result.length > 0) {
       return res.json(result)
@@ -35,7 +36,7 @@ const Authors = async (req, res) => {
       return res.json({ message: "no data found" })
     }
   } catch (error) {
-    return res.json({ message: error })
+    // return res.json({ message: error })
   }
 
 }
