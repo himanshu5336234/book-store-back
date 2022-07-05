@@ -9,7 +9,7 @@ require("dotenv").config()
 
 
 
-app.set('port', 8080);
+app.set('port', process.env.PORT||8080);
 
 
 //middleware
@@ -29,7 +29,7 @@ app.use(session({
 app.use("/", Router)
 
 
-app.listen(8080, () => {
-  console.log("i m on:",)
+app.listen(process.env.PORT||8080, () => {
+  console.log("i m on:",process.env.PORT)
 })
 module.exports = app;
